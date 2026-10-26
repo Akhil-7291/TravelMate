@@ -43,7 +43,10 @@ app.post('/api/trips', (req, res) => {
   trips.push(newTrip);
   res.status(201).json(newTrip);
 });
-
+// Backend homepage
+app.get('/', (req, res) => {
+  res.send('Welcome to TravelMate Backend API');
+});
 app.listen(PORT, () => {
   console.log(`Backend running at http://localhost:${PORT}`);
 });
